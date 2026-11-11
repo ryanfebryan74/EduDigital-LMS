@@ -279,8 +279,8 @@ box-shadow:0 26px 50px -18px rgba(75,58,146,.65);transform:perspective(1100px) r
 #lms .bg2 i{width:8px;height:8px;border-radius:50%;background:#7CF0A8;animation:pl 2s infinite}
 @keyframes pl{0%{box-shadow:0 0 0 0 rgba(124,240,168,.7)}70%,100%{box-shadow:0 0 0 8px rgba(124,240,168,0)}}
 #lms .gt{background:linear-gradient(90deg,#FFE082,#FFC107 45%,#FFFFFF);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;text-shadow:none}
-#lms .tw{min-height:2.6em;margin:0 0 14px;font-size:14px;color:rgba(255,255,255,.92)}
-#lms .tw u{display:inline-block;width:2px;height:1.1em;background:#FFC107;margin-left:3px;vertical-align:-2px;text-decoration:none;animation:cr 1s steps(1) infinite}
+#lms .ty{min-height:2.6em;margin:0 0 14px;font-size:14px;color:rgba(255,255,255,.92)}
+#lms .ty u{display:inline-block;width:2px;height:1.1em;background:#FFC107;margin-left:3px;vertical-align:-2px;text-decoration:none;animation:cr 1s steps(1) infinite}
 @keyframes cr{50%{opacity:0}}
 #lms .dt{display:block;margin-top:14px;color:rgba(255,255,255,.7)}
 #lms .pt{position:absolute;inset:0;pointer-events:none}
@@ -315,11 +315,11 @@ box-shadow:0 26px 50px -18px rgba(75,58,146,.65);transform:perspective(1100px) r
 #lms .bn a.on svg{animation:pop2 .45s cubic-bezier(.2,1.6,.3,1)}
 @keyframes pop2{from{transform:scale(.6) translateY(5px)}}
 @media(prefers-reduced-motion:reduce){#lms .side,#lms .side:after,#lms .hero3 .sw,#lms .pt i,#lms .bg2 i,#lms .tw u,#lms .side.intro *{animation:none}#lms .nvh{transition:none}}
-@media(max-width:768px){#lms .tw{font-size:13px}#lms .hb h2{margin:10px 0 6px}}
+@media(max-width:768px){#lms .ty{font-size:13px}#lms .hb h2{margin:10px 0 6px}}
 #lms .hero3{min-height:0;padding:20px 28px;margin-bottom:14px}
 #lms .hb h2{font-size:22px;margin:10px 0 6px}
 #lms .bg2{min-width:0}#lms .bg2 span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-#lms .tw{min-height:1.5em;margin:0 0 12px;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#lms .ty{min-height:1.5em;margin:0 0 12px;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #lms .hero3 .btn{padding:8px 16px;font-size:12.5px}
 #lms .o3{width:74px;bottom:10%}#lms .o1{left:22%;top:8%;width:98px}#lms .o4{left:44%;bottom:6%;width:50px}#lms .o2{left:52%;top:8%;width:84px}
 #lms .o5{margin-top:-58px;width:112px}#lms .o5 svg{width:76px;height:76px}
@@ -329,12 +329,74 @@ box-shadow:0 26px 50px -18px rgba(75,58,146,.65);transform:perspective(1100px) r
 @media(max-width:768px){
 #lms .hero3{padding:16px 16px 14px;border-radius:18px}
 #lms .hb h2{font-size:18px;margin:12px 0 4px}
-#lms .tw{font-size:12.5px;margin-bottom:12px}
+#lms .ty{font-size:12.5px;margin-bottom:12px}
 #lms .bg2{max-width:calc(100% - 128px)}
 #lms .hs{position:absolute;top:8px;right:6px;bottom:auto;left:auto;width:128px;height:84px;margin:0}
 #lms .o1{left:0;top:0;width:62px}#lms .o2{left:auto;right:0;top:16px;width:56px}
 #lms .o3,#lms .o4,#lms .o5{display:none}
 #lms .hero3 .btn{padding:8px 14px;font-size:12px}}
+#lms .mg{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:16px}
+#lms .mcard{background:#fff;border-radius:18px;padding:0 16px 14px;border:1px solid #F0EEF8;box-shadow:0 8px 24px -10px rgba(91,74,155,.25);overflow:hidden;transition:transform .2s,box-shadow .2s;color:#1F2937}
+#lms .mcard:hover{transform:translateY(-3px);box-shadow:0 14px 30px -10px rgba(91,74,155,.35)}
+#lms .mb{position:relative;height:68px;margin:0 -16px;background-image:radial-gradient(rgba(255,255,255,.28) 1.5px,transparent 1.5px);background-size:16px 16px}
+#lms .mav{position:absolute;left:16px;bottom:-26px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:23px;box-shadow:0 0 0 4px #fff,0 10px 18px -6px rgba(0,0,0,.35)}
+#lms .mst{position:absolute;right:12px;top:12px;font-size:11px;font-weight:600;padding:3px 12px;border-radius:999px;background:rgba(255,255,255,.88);color:#6B7280}
+#lms .mst.on{color:#15803D}
+#lms .mn{padding:32px 0 6px 2px}
+#lms .mn b{display:block;font-size:16px;color:#1F2937;line-height:1.3}
+#lms .mn small{color:#6B7280;font-size:12.5px}
+#lms .ir{display:flex;align-items:center;gap:8px;padding:8px 10px;background:#F6F4FC;border-radius:12px;margin-top:8px;font-size:13px}
+#lms .il{color:#6B7280;font-size:11px;font-weight:500;width:58px;flex:none}
+#lms .iv{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#1F2937;font-weight:500}
+#lms .iv code{background:#fff;border:1px solid #E5E7EB;padding:3px 9px;border-radius:8px;font-size:12.5px;letter-spacing:.5px;color:#1F2937}
+#lms .mt{color:#9CA3AF;font-weight:400;font-size:12px}
+#lms .ir .ib{width:30px;height:30px;flex:none}
+#lms .mpg{margin-top:12px;font-size:12px}
+#lms .mpg .lt b{color:#1F2937}
+#lms .mf{display:flex;align-items:center;gap:8px;margin-top:14px;flex-wrap:wrap}
+#lms .mf .ib:last-child{margin-left:auto}
+@media(max-width:768px){#lms .mg{gap:14px}#lms .mf .btn{flex:1;justify-content:center}#lms .mf .ib:last-child{margin-left:0;flex:none}}
+/* Kartu Member simpel, serasi dengan tema; header HP */
+#lms .mcard{position:relative;padding:16px;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.8);border-radius:18px;box-shadow:0 6px 22px rgba(91,74,155,.10);color:#1F2937}
+#lms .mcard:before{content:"";position:absolute;left:18px;right:18px;top:0;height:3px;border-radius:0 0 4px 4px;background:linear-gradient(90deg,var(--c1),var(--c2))}
+#lms .mh{display:flex;align-items:center;gap:12px}
+#lms .avt{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px;flex:none;box-shadow:0 6px 14px -4px rgba(91,74,155,.5)}
+#lms .mcard .mn{padding:0;flex:1;min-width:0}
+#lms .mcard .mn b{font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#lms .stt{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;color:#9CA3AF;background:#F3F4F6;padding:3px 10px;border-radius:999px;flex:none}
+#lms .stt:before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+#lms .stt.on{color:var(--g);background:#DCFCE7}
+#lms .mcard .ir{margin-top:14px;padding:6px 6px 6px 12px;border:1px solid #EDE9F7}
+#lms .mcard .il{width:auto}
+#lms .mcard .mpg{margin-top:12px}
+#lms .mcard .mf{margin-top:12px;padding-top:12px;border-top:1px solid #F0EEF8;justify-content:flex-end;gap:8px}
+#lms .mcard .mf .ib{margin-left:0}
+#lms .mcard .mf .ib.dl:hover{border-color:#EF4444;color:#EF4444;background:#FEF2F2}
+@media(max-width:768px){
+#lms .mcard .mf{justify-content:stretch}
+#lms .mcard .mf .ib{flex:1;width:auto;height:42px;border-radius:12px}
+#lms .top>div:first-child{flex:1;min-width:0}
+#lms .top h2{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#lms .top .ac{flex:none;gap:10px}
+#lms .top .av{position:relative;width:42px;height:42px;box-shadow:0 0 0 3px #fff,0 6px 14px rgba(91,74,155,.35)}
+#lms .top .av:after{content:"";position:absolute;right:-1px;bottom:-1px;width:11px;height:11px;border-radius:50%;background:#2EA84F;border:2px solid #fff}
+#lms .top .mo{width:42px;height:42px;background:linear-gradient(135deg,#FFF1F0,#FDE2E0);border:1px solid #F7C4BF;color:#DC2626;box-shadow:0 6px 14px -6px rgba(220,38,38,.45)}
+}
+/* Kartu Member: semua info terlihat, tanpa foto profil */
+#lms .mcard .mh{justify-content:space-between}
+#lms .mcard .mn b{font-size:16.5px;white-space:normal}
+#lms .mcard .ir{margin-top:8px;padding:8px 8px 8px 10px;border-radius:12px}
+#lms .mcard .mh+.ir{margin-top:14px}
+#lms .mcard .il{display:flex;align-items:center;gap:7px;width:92px}
+#lms .ri{width:24px;height:24px;border-radius:8px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--c1),var(--c2));flex:none;font-style:normal}
+#lms .mcard .iv{white-space:normal;overflow:visible;word-break:break-word;font-size:13px}
+#lms .mcard .iv code{white-space:nowrap}
+#lms .mcard .mf{gap:8px;justify-content:stretch}
+#lms .mbt{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;height:38px;border-radius:12px;border:1px solid #EDE9F7;background:#F6F4FC;color:var(--p);font:500 12.5px Poppins,system-ui,sans-serif;cursor:pointer;transition:.2s}
+#lms .mbt:hover{background:var(--p);color:#fff;border-color:var(--p)}
+#lms .mbt.dl{background:#FEF2F2;border-color:#FBD5D5;color:#DC2626}
+#lms .mbt.dl:hover{background:#DC2626;color:#fff;border-color:#DC2626}
+@media(max-width:768px){#lms .mcard .il{width:100%}#lms .mcard .ir{flex-wrap:wrap}#lms .mcard .iv{flex:1 1 0}#lms .mbt{height:42px}}
 </style>
 
 <div id="lms"><div class="bg"><span class="aur"></span><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span></div><div id="view"></div></div>
@@ -358,7 +420,7 @@ const $=(s,e=document)=>e.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const uid=()=>'x'+Math.random().toString(36).slice(2,10);
 const sha=async s=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))].map(b=>b.toString(16).padStart(2,'0')).join('');
-const P={home:'<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/>',video:'<rect x="2" y="6" width="14" height="12" rx="2"/><path d="m22 8-6 4 6 4z"/>',tool:'<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/>',users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',cog:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/>',out:'<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>',plus:'<path d="M12 5v14M5 12h14"/>',trash:'<path d="M3 6h18M8 6V4h8v2m-9 0 1 14h8l1-14"/>',edit:'<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/>',check:'<path d="M20 6 9 17l-5-5"/>',search:'<circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>',book:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/>',dl:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>',x:'<path d="M18 6 6 18M6 6l12 12"/>',pin:'<path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/>',eye:'<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',eyeoff:'<path d="M17.94 17.94A10.9 10.9 0 0 1 12 19c-6.5 0-10-7-10-7a18.5 18.5 0 0 1 5.06-5.94M9.9 4.24A9 9 0 0 1 12 5c6.5 0 10 7 10 7a18.5 18.5 0 0 1-2.16 3.19M1 1l22 22"/>',copy:'<rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>',mail:'<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/>',max:'<path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/>',ext:'<path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>'};
+const P={home:'<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/>',video:'<rect x="2" y="6" width="14" height="12" rx="2"/><path d="m22 8-6 4 6 4z"/>',tool:'<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/>',users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',cog:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/>',power:'<path d="M12 2v10"/><path d="M18.4 6.6a9 9 0 1 1-12.8 0"/>',out:'<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>',plus:'<path d="M12 5v14M5 12h14"/>',trash:'<path d="M3 6h18M8 6V4h8v2m-9 0 1 14h8l1-14"/>',edit:'<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/>',check:'<path d="M20 6 9 17l-5-5"/>',search:'<circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>',book:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/>',dl:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>',x:'<path d="M18 6 6 18M6 6l12 12"/>',pin:'<path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/>',eye:'<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',eyeoff:'<path d="M17.94 17.94A10.9 10.9 0 0 1 12 19c-6.5 0-10-7-10-7a18.5 18.5 0 0 1 5.06-5.94M9.9 4.24A9 9 0 0 1 12 5c6.5 0 10 7 10 7a18.5 18.5 0 0 1-2.16 3.19M1 1l22 22"/>',copy:'<rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>',mail:'<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/>',max:'<path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/>',ext:'<path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>'};
 const ic=(n,s=18)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${P[n]}</svg>`;
 
 const DEMO_ADMIN='admin@demo.com';
@@ -477,7 +539,7 @@ function appView(){
   <nav class="nav"><span class="nvh"></span>${n.map((i,x)=>`<a data-a="nav" data-id="${i[0]}" style="--i:${x}" class="${S.page===i[0]?'on':''}"><span class="ni">${ic(i[1])}</span><span class="nt">${i[2]}</span></a>`).join('')}</nav>
   <a class="lo" data-a="logout">${ic('out')}Keluar</a></aside>
   <main class="main"><div class="top"><div><h2>Selamat datang, ${esc(S.user.nama)}</h2><small>${admin()?'Administrator':'Member'}</small></div>
-  <div class="sr">${ic('search',16)}<input id="q" type="search" name="cari-konten" autocomplete="off" readonly autocapitalize="off" spellcheck="false" placeholder="Cari materi atau tools" value="${esc(S.q)}"></div><div class="ac">${fsBtns()}<div class="av">${esc((S.user.nama||'A')[0]).toUpperCase()}</div><button class="ib mo" data-a="logout" aria-label="Keluar">${ic('out',16)}</button></div></div>
+  ${S.page!=='member'?'':`<div class="sr">${ic('search',16)}<input id="q" type="search" name="cari-konten" autocomplete="off" readonly autocapitalize="off" spellcheck="false" placeholder="Cari materi atau tools" value="${esc(S.q)}"></div>`}<div class="ac">${fsBtns()}<div class="av">${esc((S.user.nama||'A')[0]).toUpperCase()}</div><button class="ib mo" data-a="logout" aria-label="Keluar">${ic('power',19)}</button></div></div>
   <div id="pg">${page()}</div><footer class="cp">© ${new Date().getFullYear()} Febryan. Seluruh hak cipta dilindungi.</footer></main>
   <nav class="bn">${n.map(i=>`<a data-a="nav" data-id="${i[0]}" class="${S.page===i[0]?'on':''}">${ic(i[1],22)}<span>${i[2]}</span></a>`).join('')}</nav></div>`;
 }
@@ -547,7 +609,7 @@ function dash(){
   return `<div class="hero3" id="hero"><div class="pt">${Array.from({length:14},(_,i)=>`<i style="left:${(i*37+11)%97}%;top:${(i*53+7)%91}%;animation-delay:-${(i*.7).toFixed(1)}s"></i>`).join('')}</div><div class="sw"></div>
   <div class="hb"><span class="bg2"><i></i><span>${(h=>h<11?'Selamat pagi':h<15?'Selamat siang':h<18?'Selamat sore':'Selamat malam')(new Date().getHours())}, ${esc(S.user.nama)}</span></span>
   <h2>${mb?'Lanjutkan <span class="gt">belajar</span> hari ini':'Kelola <span class="gt">konten belajar</span> dengan lebih mudah'}</h2>
-  <p class="tw"><span id="tw" data-p="${esc(JSON.stringify(mb?[`Anda sudah menyelesaikan ${my} dari ${nm} materi`,'Tonton materi video kapan saja','Buka tools skill AI untuk belajar','Tandai materi yang sudah selesai']:['Unggah materi dari YouTube atau Drive','Sematkan konten yang penting','Pantau progres belajar member','Kirim info login lewat email']))}"></span><u></u></p>
+  <p class="ty"><span id="tw" data-p="${esc(JSON.stringify(mb?[`Anda sudah menyelesaikan ${my} dari ${nm} materi`,'Tonton materi video kapan saja','Buka tools skill AI untuk belajar','Tandai materi yang sudah selesai']:['Unggah materi dari YouTube atau Drive','Sematkan konten yang penting','Pantau progres belajar member','Kirim info login lewat email']))}"></span><u></u></p>
   <div class="ac" style="justify-content:flex-start;flex-wrap:wrap">${btns}</div></div>
   <div class="hs">
     <div class="ob o3" style="--d:16;--dl:-1.2s" data-a="hs" data-id="o3"><div class="fl">${svgCap()}</div></div>
@@ -577,13 +639,16 @@ function toolsPg(){
   <div class="ac"><a class="btn sm" href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${ic('dl',14)}Buka file</a>${admin()?`<button class="ib${x.pin?' on':''}" data-a="pinTool" data-id="${x.id}" title="Sematkan" aria-label="Sematkan">${ic('pin',15)}</button><button class="ib" data-a="editTool" data-id="${x.id}">${ic('edit',15)}</button><button class="ib" data-a="delTool" data-id="${x.id}">${ic('trash',15)}</button>`:''}</div></div>`).join('')}</div>`:empty(admin()?'Belum ada tools. Klik Tambah Tools untuk mengunggah skill AI.':'Belum ada tools.')}`;
 }
 function memberPg(){
-  const l=S.users.filter(x=>hit(x,['nama','username','email'])),pw=id=>(S.kred.find(k=>k.id===id)||{}).password;
+  const l=S.users.filter(x=>hit(x,['nama','username','email'])),pw=id=>(S.kred.find(k=>k.id===id)||{}).password,nm=S.materi.length;
   return `<div class="hd"><h3>Data Member</h3><button class="btn" data-a="addUser">${ic('plus',16)}Tambah Member</button></div>
-  <div class="card tw">${l.length?`<table><tr><th>Nama</th><th>Email</th><th>Username</th><th>Password</th><th>Selesai</th><th>Status</th><th></th></tr>${l.map(x=>{const p=pw(x.id),v=S.show[x.id];return `<tr><td>${esc(x.nama)}</td>
-  <td>${x.email?`<a class="ml" href="mailto:${esc(x.email)}">${esc(x.email)}</a>`:'<small>Belum diisi</small>'}</td><td>${esc(x.username)}</td>
-  <td>${p?`<span class="pwv"><code>${v?esc(p):'••••••••'}</code><button class="ib" data-a="eye" data-id="${x.id}" aria-label="Lihat password">${ic(v?'eyeoff':'eye',15)}</button><button class="ib" data-a="cp" data-id="${x.id}" aria-label="Salin password">${ic('copy',15)}</button></span>`:'<small>Belum tersimpan, atur ulang lewat Ubah</small>'}</td>
-  <td>${S.progres.filter(q=>q.userId===x.id&&q.selesai).length}/${S.materi.length}</td><td><span class="bd ${x.aktif!==false?'ok':''}" style="margin:0">${x.aktif!==false?'Aktif':'Nonaktif'}</span></td>
-  <td class="ac">${x.email?`<button class="ib" data-a="mail" data-id="${x.id}" title="Kirim info login lewat email" aria-label="Kirim email">${ic('mail',15)}</button>`:''}<button class="ib" data-a="editUser" data-id="${x.id}">${ic('edit',15)}</button><button class="ib" data-a="delUser" data-id="${x.id}">${ic('trash',15)}</button></td></tr>`}).join('')}</table>`:empty('Belum ada member. Klik Tambah Member.')}</div>`;
+  ${l.length?`<div class="mg">${l.map(x=>{
+    const p=pw(x.id),v=S.show[x.id],d=S.progres.filter(q=>q.userId===x.id&&q.selesai).length,pc=nm?Math.round(d/nm*100):0,[c1,c2]=CVP[hash(x.username||x.nama)%8],on=x.aktif!==false;
+    return `<div class="mcard" style="--c1:${c1};--c2:${c2}"><div class="mh"><div class="mn"><b>${esc(x.nama)}</b></div><span class="stt ${on?'on':''}">${on?'Aktif':'Nonaktif'}</span></div>
+    <div class="ir"><span class="il"><i class="ri">${ic('users',13)}</i>Username</span><span class="iv">@${esc(x.username)}</span></div>
+    <div class="ir"><span class="il"><i class="ri">${ic('mail',13)}</i>Email</span><span class="iv">${x.email?`<a class="ml" href="mailto:${esc(x.email)}">${esc(x.email)}</a>`:'<span class="mt">Belum diisi</span>'}</span></div>
+    <div class="ir"><span class="il"><i class="ri">${ic('eye',13)}</i>Password</span><span class="iv">${p?`<code>${v?esc(p):'••••••••'}</code>`:'<span class="mt">Belum tersimpan, atur ulang lewat Ubah</span>'}</span>${p?`<button class="ib" data-a="eye" data-id="${x.id}" aria-label="Lihat password">${ic(v?'eyeoff':'eye',15)}</button><button class="ib" data-a="cp" data-id="${x.id}" aria-label="Salin password">${ic('copy',15)}</button>`:''}</div>
+    <div class="mpg"><div class="lt"><span class="mt">Progres belajar</span><b>${d}/${nm}</b></div><div class="bar"><i style="width:${pc}%;background:linear-gradient(90deg,${c1},${c2})"></i></div></div>
+    <div class="mf">${x.email?`<button class="mbt" data-a="mail" data-id="${x.id}">${ic('mail',14)}Email</button>`:''}<button class="mbt" data-a="editUser" data-id="${x.id}">${ic('edit',14)}Ubah</button><button class="mbt dl" data-a="delUser" data-id="${x.id}">${ic('trash',14)}Hapus</button></div></div>`}).join('')}</div>`:empty('Belum ada member. Klik Tambah Member.')}`;
 }
 function setPg(){
   return `<div class="two"><div class="card"><h3>Ganti Password</h3><div style="height:8px"></div>
@@ -620,10 +685,10 @@ function modal(title,fields,save){
   const sb=$('#ms',o);
   sb.onclick=async()=>{const d={};fields.forEach(f=>{let v=$('#f_'+f.k,o).value.trim();if(f.t==='cat'&&v==='__new'){v=$('#f_'+f.k+'_new',o).value.trim();const ex=(f.o||[]).find(c=>c.toLowerCase()===v.toLowerCase());if(ex)v=ex}d[f.k]=v});sb.disabled=true;try{await save(d);o.remove()}catch(e){sb.disabled=false;toast(e.message)}};
 }
-function ask(title,msg,name,ok='Ya, hapus'){
+function ask(title,msg,name,ok='Ya, hapus',icn='trash'){
   return new Promise(res=>{
     const o=document.createElement('div');o.className='ov qa';
-    o.innerHTML=`<div class="md card qd" role="alertdialog" aria-modal="true" aria-labelledby="qt"><div class="qi">${ic('trash',28)}</div><h3 id="qt">${esc(title)}</h3>${name?`<span class="qm">${esc(name)}</span>`:''}<p>${esc(msg)}</p><div class="qb"><button class="btn gy" id="qn">Batal</button><button class="btn rd" id="qy">${ic('trash',15)}${esc(ok)}</button></div></div>`;
+    o.innerHTML=`<div class="md card qd" role="alertdialog" aria-modal="true" aria-labelledby="qt"><div class="qi">${ic(icn,28)}</div><h3 id="qt">${esc(title)}</h3>${name?`<span class="qm">${esc(name)}</span>`:''}<p>${esc(msg)}</p><div class="qb"><button class="btn gy" id="qn">Batal</button><button class="btn rd" id="qy">${ic(icn,15)}${esc(ok)}</button></div></div>`;
     $('#lms').append(o);
     const kd=e=>{if(e.key==='Escape')end(false)};
     const end=v=>{document.removeEventListener('keydown',kd);o.classList.add('out');setTimeout(()=>o.remove(),180);res(v)};
@@ -691,7 +756,7 @@ const act={
       await loadAll();S.page='dash';render();
     }catch(e){S.user=null;S.err=e.message;render()}
   },
-  async logout(){if(!IS_PREVIEW&&S.role==='admin')await fb.signOut(fb.auth);S.user=null;S.role=null;S.err='';S.sbDone=false;NAVY=null;render()},
+  async logout(){if(!await ask('Keluar dari akun?','Anda akan keluar dan perlu masuk lagi untuk melanjutkan.',null,'Ya, keluar','power'))return;if(!IS_PREVIEW&&S.role==='admin')await fb.signOut(fb.auth);S.user=null;S.role=null;S.err='';S.sbDone=false;NAVY=null;render()},
   addMateri:()=>mform(),
   async pinMateri(id){const x=S.materi.find(m=>m.id===id);await DB.set('materi',id,{pin:!x.pin});await refresh();toast(x.pin?'Sematan dilepas':'Materi disematkan')},editMateri:id=>mform(S.materi.find(x=>x.id===id)),
   async delMateri(id){if(await ask('Hapus materi?','Materi ini akan dihapus permanen dan tidak bisa dikembalikan.',(S.materi.find(x=>x.id===id)||{}).judul)){await DB.del('materi',id);await refresh()}},
