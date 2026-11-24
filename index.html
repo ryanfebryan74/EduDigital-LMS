@@ -94,6 +94,7 @@
 #lms .chart .bc:hover i{filter:brightness(1.12)}#lms .chart .bc:hover span{color:var(--p)}
 #lms .tabs.sm{margin:10px 0 6px}#lms .tabs.sm a{padding:6px;font-size:12px}
 #lms .rc{cursor:pointer;border-radius:10px;padding:10px 8px;transition:.2s}#lms .rc:hover{background:#F4F1FD}
+#lms .rc svg{color:#D97706;vertical-align:-2px}
 #lms .lgw{display:inline-block;transition:transform .4s}#lms .lgw:hover{transform:rotate(-8deg) scale(1.12)}
 #lms .lg3{display:block;animation:bob 4.5s ease-in-out infinite;filter:drop-shadow(0 8px 10px rgba(30,20,70,.28))}
 #lms .sp{animation:tw 2.4s ease-in-out infinite;transform-origin:84px 16px}
@@ -107,7 +108,6 @@
 #lms .bd.pn{background:#FFF4CC;color:#B45309;display:inline-flex;align-items:center;gap:3px}
 #lms .card.pinned{border-color:#FFC107;box-shadow:0 4px 20px rgba(255,193,7,.22)}
 #lms .ib.on{background:#FFF4CC;border-color:#FFC107;color:#B45309}
-#lms .rc svg{color:#D97706;vertical-align:-2px}
 #lms .mo{display:none}
 @media(max-width:768px){
 #lms .main{padding:12px 12px 118px}
@@ -539,7 +539,7 @@ function appView(){
   <nav class="nav"><span class="nvh"></span>${n.map((i,x)=>`<a data-a="nav" data-id="${i[0]}" style="--i:${x}" class="${S.page===i[0]?'on':''}"><span class="ni">${ic(i[1])}</span><span class="nt">${i[2]}</span></a>`).join('')}</nav>
   <a class="lo" data-a="logout">${ic('out')}Keluar</a></aside>
   <main class="main"><div class="top"><div><h2>Selamat datang, ${esc(S.user.nama)}</h2><small>${admin()?'Administrator':'Member'}</small></div>
-  ${S.page!=='member'?'':`<div class="sr">${ic('search',16)}<input id="q" type="search" name="cari-konten" autocomplete="off" readonly autocapitalize="off" spellcheck="false" placeholder="Cari materi atau tools" value="${esc(S.q)}"></div>`}<div class="ac">${fsBtns()}<div class="av">${esc((S.user.nama||'A')[0]).toUpperCase()}</div><button class="ib mo" data-a="logout" aria-label="Keluar">${ic('power',19)}</button></div></div>
+  ${['materi','tools','member'].includes(S.page)?`<div class="sr">${ic('search',16)}<input id="q" type="search" name="cari-konten" autocomplete="off" readonly autocapitalize="off" spellcheck="false" placeholder="${{materi:'Cari judul, kategori, atau deskripsi materi',tools:'Cari nama, kategori, atau deskripsi tools',member:'Cari nama, username, atau email member'}[S.page]}" value="${esc(S.q)}"></div>`:''}<div class="ac">${fsBtns()}<div class="av">${esc((S.user.nama||'A')[0]).toUpperCase()}</div><button class="ib mo" data-a="logout" aria-label="Keluar">${ic('power',19)}</button></div></div>
   <div id="pg">${page()}</div><footer class="cp">© ${new Date().getFullYear()} Febryan. Seluruh hak cipta dilindungi.</footer></main>
   <nav class="bn">${n.map(i=>`<a data-a="nav" data-id="${i[0]}" class="${S.page===i[0]?'on':''}">${ic(i[1],22)}<span>${i[2]}</span></a>`).join('')}</nav></div>`;
 }
@@ -629,14 +629,14 @@ function materiPg(){
   return `<div class="hd"><h3>Materi Pembelajaran</h3>${admin()?`<button class="btn" data-a="addMateri">${ic('plus',16)}Tambah Materi</button>`:''}</div>
   ${chipBar('materi')}${l.length?`<div class="cg">${l.map(x=>`<div class="card h mc${x.pin?' pinned':''}"><div class="th nt" data-a="open" data-id="${x.id}">${cover(x)}<span class="pl">${ic('video',22)}</span></div>
   ${pinBd(x)}<span class="bd">${esc(x.kategori||'Umum')}</span>${!admin()&&isDone(x.id)?'<span class="bd ok">Selesai</span>':''}<h4>${esc(x.judul)}</h4><p>${esc(x.deskripsi)}</p>
-  <div class="ac"><button class="btn sm" data-a="open" data-id="${x.id}">Tonton</button>${admin()?`<button class="ib${x.pin?' on':''}" data-a="pinMateri" data-id="${x.id}" title="Sematkan" aria-label="Sematkan">${ic('pin',15)}</button><button class="ib" data-a="editMateri" data-id="${x.id}">${ic('edit',15)}</button><button class="ib" data-a="delMateri" data-id="${x.id}">${ic('trash',15)}</button>`:''}</div></div>`).join('')}</div>`:empty(admin()?'Belum ada materi. Klik Tambah Materi untuk memulai.':'Belum ada materi.')}`;
+  <div class="ac"><button class="btn sm" data-a="open" data-id="${x.id}">Tonton</button>${admin()?`<button class="ib${x.pin?' on':''}" data-a="pinMateri" data-id="${x.id}" title="Sematkan" aria-label="Sematkan">${ic('pin',15)}</button><button class="ib" data-a="editMateri" data-id="${x.id}">${ic('edit',15)}</button><button class="ib" data-a="delMateri" data-id="${x.id}">${ic('trash',15)}</button>`:''}</div></div>`).join('')}</div>`:empty(S.q?`Tidak ada materi yang cocok dengan ${esc(S.q)}.`:admin()?'Belum ada materi. Klik Tambah Materi untuk memulai.':'Belum ada materi.')}`;
 }
 function toolsPg(){
   const l=S.tools.filter(x=>hit(x,['nama','kategori','deskripsi'])&&(!S.cf.tools||(x.kategori||'Umum')===S.cf.tools)).sort(byPin);
   return `<div class="hd"><h3>Tools Skill AI</h3>${admin()?`<button class="btn" data-a="addTool">${ic('plus',16)}Tambah Tools</button>`:''}</div>
   ${chipBar('tools')}${l.length?`<div class="cg">${l.map(x=>`<div class="card h mc${x.pin?' pinned':''}"><div class="th nt">${cover(x)}<span class="pl">${ic('tool',22)}</span></div>
   ${pinBd(x)}<span class="bd">${esc(x.kategori||'Umum')}</span>${x.versi?`<span class="bd ok">v${esc(x.versi)}</span>`:''}<h4>${esc(x.nama)}</h4><p>${esc(x.deskripsi)}</p>
-  <div class="ac"><a class="btn sm" href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${ic('dl',14)}Buka file</a>${admin()?`<button class="ib${x.pin?' on':''}" data-a="pinTool" data-id="${x.id}" title="Sematkan" aria-label="Sematkan">${ic('pin',15)}</button><button class="ib" data-a="editTool" data-id="${x.id}">${ic('edit',15)}</button><button class="ib" data-a="delTool" data-id="${x.id}">${ic('trash',15)}</button>`:''}</div></div>`).join('')}</div>`:empty(admin()?'Belum ada tools. Klik Tambah Tools untuk mengunggah skill AI.':'Belum ada tools.')}`;
+  <div class="ac"><a class="btn sm" href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${ic('dl',14)}Buka file</a>${admin()?`<button class="ib${x.pin?' on':''}" data-a="pinTool" data-id="${x.id}" title="Sematkan" aria-label="Sematkan">${ic('pin',15)}</button><button class="ib" data-a="editTool" data-id="${x.id}">${ic('edit',15)}</button><button class="ib" data-a="delTool" data-id="${x.id}">${ic('trash',15)}</button>`:''}</div></div>`).join('')}</div>`:empty(S.q?`Tidak ada tools yang cocok dengan ${esc(S.q)}.`:admin()?'Belum ada tools. Klik Tambah Tools untuk mengunggah skill AI.':'Belum ada tools.')}`;
 }
 function memberPg(){
   const l=S.users.filter(x=>hit(x,['nama','username','email'])),pw=id=>(S.kred.find(k=>k.id===id)||{}).password,nm=S.materi.length;
@@ -648,7 +648,7 @@ function memberPg(){
     <div class="ir"><span class="il"><i class="ri">${ic('mail',13)}</i>Email</span><span class="iv">${x.email?`<a class="ml" href="mailto:${esc(x.email)}">${esc(x.email)}</a>`:'<span class="mt">Belum diisi</span>'}</span></div>
     <div class="ir"><span class="il"><i class="ri">${ic('eye',13)}</i>Password</span><span class="iv">${p?`<code>${v?esc(p):'••••••••'}</code>`:'<span class="mt">Belum tersimpan, atur ulang lewat Ubah</span>'}</span>${p?`<button class="ib" data-a="eye" data-id="${x.id}" aria-label="Lihat password">${ic(v?'eyeoff':'eye',15)}</button><button class="ib" data-a="cp" data-id="${x.id}" aria-label="Salin password">${ic('copy',15)}</button>`:''}</div>
     <div class="mpg"><div class="lt"><span class="mt">Progres belajar</span><b>${d}/${nm}</b></div><div class="bar"><i style="width:${pc}%;background:linear-gradient(90deg,${c1},${c2})"></i></div></div>
-    <div class="mf">${x.email?`<button class="mbt" data-a="mail" data-id="${x.id}">${ic('mail',14)}Email</button>`:''}<button class="mbt" data-a="editUser" data-id="${x.id}">${ic('edit',14)}Ubah</button><button class="mbt dl" data-a="delUser" data-id="${x.id}">${ic('trash',14)}Hapus</button></div></div>`}).join('')}</div>`:empty('Belum ada member. Klik Tambah Member.')}`;
+    <div class="mf">${x.email?`<button class="mbt" data-a="mail" data-id="${x.id}">${ic('mail',14)}Email</button>`:''}<button class="mbt" data-a="editUser" data-id="${x.id}">${ic('edit',14)}Ubah</button><button class="mbt dl" data-a="delUser" data-id="${x.id}">${ic('trash',14)}Hapus</button></div></div>`}).join('')}</div>`:empty(S.q?`Tidak ada member yang cocok dengan ${esc(S.q)}.`:'Belum ada member. Klik Tambah Member.')}`;
 }
 function setPg(){
   return `<div class="two"><div class="card"><h3>Ganti Password</h3><div style="height:8px"></div>
